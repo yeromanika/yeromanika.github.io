@@ -34,11 +34,11 @@
      <div class="main-line"></div>
      <p>Верстка на HTML и CSS <br> Разработка сайтов под ключ</p>
           </div>
-           <a class="main-down" href="#"><i class="icon-down"></i></a>
+           <a class="main-down slowly" href="#portfolio"><i class="icon-down"></i></a>
       </div>
    </div>  
 
-    <div class="portfolio">
+    <div class="portfolio" id="portfolio">
       <div class="container">
         <h2 class="section-header">Портфолио</h2>
         <div class="row">
@@ -81,9 +81,9 @@
            <strong>Подпишитесь</strong>
 
            <div class="social-links">
-             <a href="#"><i class="icon-vk"></i></a>
-             <a href="#"><i class="icon-instagram"></i></a>
-             <a href="#"><i class="icon-twitter"></i></a>
+             <a href="https://vk.com"><i class="icon-vk"></i></a>
+             <a href="https://www.instagram.com/"><i class="icon-instagram"></i></a>
+             <a href="https://twitter.com"><i class="icon-twitter"></i></a>
            </div>
          </div>
          <div class="col-md-3"><strong>Напишите мне</strong>
@@ -122,6 +122,21 @@
           modal.find('.modal-body').load(work+'.html');
         });
       });
+    </script>
+    <script>
+      
+$(document).ready(function(){
+
+    $(".slowly").on("click", function (event) {
+        event.preventDefault();
+        var id  = $(this).attr('href'),
+            top = $(id).offset().top;
+        $('body,html').animate({scrollTop: top}, 800);
+
+    });
+
+});
+
     </script>
   </body>
 </html>
